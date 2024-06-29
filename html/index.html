@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" type="text/css">
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="bgEffect"></div>
+        <div id="mainDiv">
+            <div id="MDLeftSide">
+                <div id="MDLSTopDiv">
+                    <div id="MDLSTopDivLeft">
+                        <h4 style="color: #08c098; text-shadow: 0px 0px 20px #08c098; font-size: 0.9vw;">Selected Vehicle</h4>
+                        <h4 style="color: #fff; font-size: 1.4vw; font-weight: 450; letter-spacing: 0.05vw;">Details</h4>
+                        <h4 style="color: rgb(255, 254, 254, 0.4); font-size: 0.7vw; font-weight: 450; letter-spacing: 0.03vw;" id="currentVehiclePlate"></h4>
+                    </div>
+                    <div id="MDLSTopDivRight">
+                        <div id="MDLSTopDivRightButton" onclick="clFunc('closeLeftSide')"><h4>Close</h4></div>
+                    </div>
+                </div>
+                <div id="MDLSBottomDiv">
+                    <div id="MDLSBDTakeOutBtn" onclick="clFunc('takeOutVehicle')">Take Out Vehicle</div>
+                    <div id="MDLSBDBtn">
+                        <h4 style="text-shadow: 0px 0px 20px #08c098; font-size: 0.8vw;">Vehicle Status</h4>
+                        <h4 style="color: rgb(255, 254, 254, 0.4); font-size: 0.7vw; font-weight: 450;" id="vehicleStatusH4"></h4>
+                    </div>
+                    <div id="MDLSBDBtn2">
+                        <h4 style="text-shadow: 0px 0px 20px #08c098; width: 86%; font-size: 0.8vw;">Vehicle Parking Log</h4>
+                        <div id="MDLSBDBtn2DropdownBtn" onclick="clFunc('dropdown')"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div id="MDLSBottomDivParkingLogs"></div>
+                </div>
+            </div>
+            <div id="MDRightSide">
+                <div id="MDRSTopDiv">
+                    <div id="MDRSTopDivLeft">
+                        <h4 style="color: #08c098; text-shadow: 0px 0px 20px #08c098; font-size: 0.9vw; text-transform: capitalize;" id="garageLabel"></h4>
+                        <h4 style="color: #fff; font-size: 1.4vw; font-weight: 450;">Garage</h4>
+                        <h4 style="color: rgb(255, 254, 254, 0.4); font-size: 0.7vw; font-weight: 450;">Get vehicles from the garage</h4>
+                    </div>
+                    <div id="MDRSTopDivCenter">
+                        <div id="MDRSTDCParkDiv"><h4>P</h4></div>
+                        <div id="MDRSTDCDiv1"><h4>Parked</h4><h4>Cars</h4></div>
+                        <div id="MDRSTDCDiv2"><div id="MDRSTDCDiv2Inside"></div><h4 id="parkedVehsH4"></h4></div>
+                    </div>
+                    <div id="MDRSTopDivRight">
+                        <div id="MDRSTopDivRight1"><h4>Exit</h4></div>
+                        <div id="MDRSTopDivRight2"><h4>Escape</h4></div>
+                    </div>
+                </div>
+                <div id="MDRSBottomDivTop">
+                    <div id="MDRSBottomDivTopInputDiv">
+                        <i class="far fa-search" style="color: #08c098; text-shadow: 0px 0px 20px #08c098;"></i>
+                        <input type="text" placeholder="Search an automobile" id="MDRSBottomDivTopInput">
+                    </div>
+                    <div id="MDRSBottomDivTopButtons">
+                        <div class="MDRSBottomDivTopButton MDRSBottomDivTopButtonActive" id="MDRSBottomDivTopButtonAll" style="width: 25%;" onclick="clFunc('showVehicles', 'All')"><h4>ALL</h4></div>
+                        <div class="MDRSBottomDivTopButton MDRSBottomDivTopButtonInactive" id="MDRSBottomDivTopButtonPersonal" style="width: 50%;" onclick="clFunc('showVehicles', 'Personal')"><h4>PERSONAL</h4></div>
+                        <div class="MDRSBottomDivTopButton MDRSBottomDivTopButtonInactive" id="MDRSBottomDivTopButtonJob" style="width: 25%;" onclick="clFunc('showVehicles', 'Job')"><H4>JOB</H4></div>
+                    </div>
+                </div>
+                <div id="MDRSBottomDiv">
+                    <div id="MDRSBottomDivBottom"></div>
+                </div>
+            </div>
+        </div>
+        <div id="textUI">
+            <div id="TUKeyDiv"><div id="TUKeyDivInside">E</div></div>
+            <div id="TUTDiv">
+                <div id="TUDiv"></div>
+                <h4 id="textUIH4"></h4>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
